@@ -20,7 +20,7 @@ public class City {
 	private String name;
 	
 	@OneToMany(mappedBy = "city")
-	private List<Event> events = new ArrayList<>();
+	public List<Event> events = new ArrayList<>();
 	
 	public City() {
 	}

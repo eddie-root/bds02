@@ -7,16 +7,17 @@ import com.devsuperior.bds02.entities.Event;
 
 public class EventDTO implements Serializable {
 	private static final long serialVersionUID = 1L;
-	
+
 	private Long id;
 	private String name;
 	private LocalDate date;
 	private String url;
-	private Long cityId;
 	
+	private Long cityId;
+
 	public EventDTO() {
 	}
-
+	
 	public EventDTO(Long id, String name, LocalDate date, String url, Long cityId) {
 		this.id = id;
 		this.name = name;
@@ -25,14 +26,15 @@ public class EventDTO implements Serializable {
 		this.cityId = cityId;
 	}
 	
-	public EventDTO(Event entity) {
-		id = entity.getId();
-		name = entity.getName();
-		date = entity.getDate();
-		url = entity.getUrl();
-		cityId = entity.getCity().getId();
+	public EventDTO(Event eve) {
+		id = eve.getId();
+		name = eve.getName();
+		date = eve.getDate();
+		url = eve.getUrl();
+		cityId = eve.getCity().getId();
 	}
-
+	
+	
 	public Long getId() {
 		return id;
 	}
@@ -72,4 +74,7 @@ public class EventDTO implements Serializable {
 	public void setCityId(Long cityId) {
 		this.cityId = cityId;
 	}
+	
+	
+	
 }

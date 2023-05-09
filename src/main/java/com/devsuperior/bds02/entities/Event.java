@@ -14,6 +14,7 @@ import javax.persistence.Table;
 @Table(name = "tb_event")
 public class Event {
 
+
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
@@ -24,10 +25,10 @@ public class Event {
 	@ManyToOne
 	@JoinColumn(name = "city_id")
 	private City city;
-	
+
 	public Event() {
 	}
-
+	
 	public Event(Long id, String name, LocalDate date, String url, City city) {
 		this.id = id;
 		this.name = name;
@@ -75,4 +76,9 @@ public class Event {
 	public void setCity(City city) {
 		this.city = city;
 	}
+
+	
+	
+	
+	
 }
